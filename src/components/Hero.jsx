@@ -1,132 +1,91 @@
-import {
-  ArrowRight,
-  Play,
-  Leaf,
-  Recycle,
-  Truck,
-  TrendingUp,
-} from "lucide-react";
+import React from "react";
 import "./Hero.css";
 
-function Hero() {
+const Hero = () => {
   return (
-    <section className="hero-section" id="home">
-      <div className="hero-container">
-        <div className="hero-content">
-          <span className="hero-tag">
-            <Leaf size={16} />
-            Smart Waste Management Platform
-          </span>
+    <section className="about-hero">
+      <div className="about-hero-container">
+        {/* Left Content */}
+        <div className="about-hero-content">
+          <div className="hero-tag">
+            <span>🌿</span>
+            Smart Solutions for a Cleaner Planet
+          </div>
 
           <h1>
-            Make Your City
-            <span> Cleaner & Greener.</span>
+            Smarter Waste
+            <br />
+            Management.
+            <br />
+            <span>Greener Tomorrow.</span>
           </h1>
 
           <p>
-            Manage waste collection smarter with EcoTrack. Monitor collection
-            activities, optimize routes and build a cleaner, sustainable future.
+            EcoTrack helps you monitor, manage, and reduce waste using smart
+            technology — for a cleaner and healthier planet.
           </p>
 
           <div className="hero-buttons">
             <a href="#contact" className="hero-primary-btn">
-              Get Started <ArrowRight size={18} />
+              Get Started <span>→</span>
             </a>
 
             <a href="#how-it-works" className="hero-secondary-btn">
-              <Play size={17} /> How It Works
+              <span>▶</span> Explore How It Works
             </a>
-          </div>
-
-          <div className="hero-trust">
-            <div className="trust-icon">
-              <Recycle size={22} />
-            </div>
-            <div>
-              <strong>Smarter Waste Solutions</strong>
-              <span>Technology for a greener tomorrow</span>
-            </div>
           </div>
         </div>
 
-        <div className="hero-visual">
-          <div className="hero-glow"></div>
+        {/* Right Visual */}
+        <div className="about-hero-visual">
+          <div className="hero-image-bg"></div>
 
-          <div className="hero-dashboard">
-            <div className="dashboard-top">
-              <div>
-                <span className="dashboard-label">EcoTrack Overview</span>
-                <h3>Waste Management</h3>
-              </div>
-              <span className="live-status">● Live Demo</span>
-            </div>
+          <img
+            src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1000&q=85"
+            alt="EcoTrack smart waste management"
+            className="hero-main-image"
+          />
 
-            <div className="dashboard-stats">
-              <div className="dashboard-stat">
-                <span>Waste Collected</span>
-                <h2>
-                  2,450 <small>kg</small>
-                </h2>
-                <p>
-                  <TrendingUp size={14} /> Sample dashboard data
-                </p>
-              </div>
-
-              <div className="dashboard-stat">
-                <span>Active Vehicles</span>
-                <h2>08</h2>
-                <p>
-                  <Truck size={14} /> Collection fleet
-                </p>
-              </div>
-            </div>
-
-            <div className="dashboard-map">
-              <div className="map-heading">
-                <strong>Collection Activity</strong>
-                <span>Today's overview</span>
-              </div>
-
-              <div className="map-art">
-                <div className="map-road road-one"></div>
-                <div className="map-road road-two"></div>
-                <div className="map-road road-three"></div>
-                <div className="map-pin pin-one">
-                  <Truck size={17} />
-                </div>
-                <div className="map-pin pin-two">
-                  <Recycle size={17} />
-                </div>
-                <div className="map-pin pin-three">
-                  <Leaf size={17} />
-                </div>
-              </div>
+          <div className="hero-floating-card">
+            <span className="floating-icon">♻</span>
+            <div>
+              <strong>Smart Monitoring</strong>
+              <small>Waste management made easier</small>
             </div>
           </div>
 
-          <div className="floating-card floating-card-one">
-            <span className="floating-icon">
-              <Leaf size={20} />
-            </span>
-            <div>
-              <strong>Eco Friendly</strong>
-              <small>Smarter operations</small>
-            </div>
-          </div>
+          <div className="hero-leaf-decoration">🌱</div>
+        </div>
+      </div>
 
-          <div className="floating-card floating-card-two">
-            <span className="floating-icon">
-              <Truck size={20} />
-            </span>
-            <div>
-              <strong>Route Tracking</strong>
-              <small>Fleet overview</small>
-            </div>
+      {/* Feature Strip */}
+      <div className="hero-feature-strip">
+        <div className="hero-feature">
+          <span>🌿</span>
+          <div>
+            <strong>Smart Monitoring</strong>
+            <small>Real-time waste insights</small>
+          </div>
+        </div>
+
+        <div className="hero-feature">
+          <span>♻️</span>
+          <div>
+            <strong>Better Collection</strong>
+            <small>Efficient waste management</small>
+          </div>
+        </div>
+
+        <div className="hero-feature">
+          <span>🌍</span>
+          <div>
+            <strong>Greener Future</strong>
+            <small>Cleaner communities</small>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;
